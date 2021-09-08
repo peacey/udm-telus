@@ -1,0 +1,13 @@
+diff a/lnxrouter b/lnxrouter
+--- a/lnxrouter
++++ b/lnxrouter
+@@ -1686,6 +1686,9 @@ dealwith_mac() {
+ 
+ write_hostapd_conf() {  
+     cat <<- EOF > "$CONFDIR/hostapd.conf"
++		wps_state=2
++		eap_server=1
++		wps_pin_requests=/var/run/hostapd.pin-req
+ 		beacon_int=100
+ 		ssid=${SSID}
+ 		interface=${AP_IFACE}
