@@ -48,7 +48,7 @@ This step is optional but recommended so that TELUS IPTV traffic does not flood 
 ### Add Firewall Rules
 
 1. Add the IPTV Multicast Rule to allow IPTV multicast traffic into your WAN. 
-    * On your UDM, go to Settings -> Traffic & Security -> Global Threat Management -> Firewall -> Create New Rule. 
+    * On your UDM, go to Settings -> Firewall & Security ->  Firewall Rules -> Create New Rule. 
     * Set *Type:* **Internet In**. *Description:* Allow IPTV Multicast. *IPv4 Protocol:* **UDP**.
     * Under Source - *Source Type:* Address/Port Group. Click IPv4 Address Group -> Create New Group.
       * Change group's name to Optik TV. Choose type IPv4 Address/Subnet. Click Add Address and add the following 3 addresses (these are the addresses TELUS uses for IPTV):
@@ -63,7 +63,7 @@ This step is optional but recommended so that TELUS IPTV traffic does not flood 
     * Hit Apply Changes to save the rule. 
 
 2. Add the IGMP Rule to allow IGMP traffic to travel across your WAN. This rule is to be able to use your PVR from other boxes.
-    * On your UDM, go to Settings -> Traffic & Security -> Global Threat Management -> Firewall -> Create New Rule. 
+    * On your UDM, go to Settings -> Firewall & Security ->  Firewall Rules -> Create New Rule. 
     * Set *Type:* **Internet Local**. *Description:* Allow IGMP Traffic. *IPv4 Protocol:* **IGMP**.
     * Under Advanced, enable all four match options: Match State New, Match State Established, Match State Invalid, Match State Related. 
     * Hit Apply Changes to save the rule.
