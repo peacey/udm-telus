@@ -1,2 +1,2 @@
 #!/bin/sh
-/mnt/data/igmpproxy/igmpproxy /mnt/data/igmpproxy/igmpproxy.conf
+/data/igmpproxy/igmpproxy /data/igmpproxy/igmpproxy.conf
