@@ -82,8 +82,8 @@ This step is optional but recommended so that TELUS IPTV traffic does not flood 
 2. Download igmpproxy and configuration file.
 
     ```sh
-    mkdir /mnt/data/igmpproxy
-    cd /mnt/data/igmpproxy
+    mkdir /data/igmpproxy
+    cd /data/igmpproxy
     curl -Lo igmpproxy https://raw.githubusercontent.com/peacey/udm-telus/main/igmpproxy
     curl -Lo igmpproxy.conf https://raw.githubusercontent.com/peacey/udm-telus/main/igmpproxy.conf
 	chmod +x igmpproxy
@@ -121,7 +121,7 @@ This step is optional but recommended so that TELUS IPTV traffic does not flood 
 2. Install the igmpproxy boot script.
 
     ```sh
-    cd /mnt/data/on_boot.d
+    cd /data/on_boot.d
     curl -Lo 99-run-igmpproxy.sh https://raw.githubusercontent.com/peacey/udm-telus/main/run-igmpproxy.sh
     chmod +x 99-run-igmpproxy.sh
     ```
@@ -129,7 +129,7 @@ This step is optional but recommended so that TELUS IPTV traffic does not flood 
 3. That's it, now igmpproxy will start automatically on boot. If you restart and want to check if it's running, you can run the command `ps aux | grep igmpproxy`. You should see a line that looks like this in the output if it's running: 
 
     ```sh
-	6370 root     /mnt/data/igmpproxy/igmpproxy /mnt/data/igmpproxy/igmpproxy.conf
+	6370 root     /data/igmpproxy/igmpproxy /data/igmpproxy/igmpproxy.conf
 	```
 
 ### Connect Wireless Digital Boxes to Ubiquiti WiFi
